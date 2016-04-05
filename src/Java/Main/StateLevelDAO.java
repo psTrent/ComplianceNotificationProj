@@ -11,10 +11,10 @@ public interface StateLevelDAO {
 
     public void setDataSource(DataSource ds);
 
-    public void create(String state, Integer day, Integer week, Integer month, Date last_sub, Date next_sub,
+    public void create(int id, String state, String cycle, Date last_sub, Date next_sub,
                        String typeRep, String reportID, Integer notifyTimeFrame, boolean isSent);
 
-    public StateLevel getStateLevel(Integer reportID);
+    public StateLevel getStateLevel(Date next_sub, Integer notifyTimeFrame);
 
     public List<StateLevel> listStateLevel();
 
