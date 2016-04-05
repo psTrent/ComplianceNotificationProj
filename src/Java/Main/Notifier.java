@@ -3,6 +3,7 @@ package Java.Main;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import Java.Main.StateLevelJDBCTemplate;
+import Java.Main.DistrictLevelJDBCTemplate;
 /**
  * Created by BartowB on 4/4/2016.
  * takes calendar event data and stores it into a database
@@ -18,6 +19,9 @@ public class Notifier {
 
         StateLevelJDBCTemplate stateLevelJDBCTemplate =
                 (Java.Main.StateLevelJDBCTemplate)context.getBean("stateLevelJDBCTemplate");
+
+        DistrictLevelJDBCTemplate districtLevelJDBCTemplate =
+                (Java.Main.DistrictLevelJDBCTemplate)context.getBean("districtLevelJDBCTemplate");
 
 
 
